@@ -3,7 +3,7 @@ import "../css/main.css";
 import "../assets/images/oldcamp.webp";
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
-
+import loadContact from "./contact";
 let selectCnt = 0;
 
 const content = document.querySelector("#content");
@@ -46,29 +46,6 @@ function select(tab) {
       return;
     }
   });
-
-  // home.classList.forEach((elem) => {
-  //   if (elem === "tab-selected") {
-  //     console.log("selecting", tab);
-  //     home.classList.toggle("tab-selected");
-  //     tab.classList.toggle("tab-selected");
-  //     return;
-  //   }
-  // });
-  // menu.classList.forEach((elem) => {
-  //   if (elem === "tab-selected") {
-  //     menu.classList.toggle("tab-selected");
-  //     tab.classList.toggle("tab-selected");
-  //     return;
-  //   }
-  // });
-  // contact.classList.forEach((elem) => {
-  //   if (elem === "tab-selected") {
-  //     contact.classList.toggle("tab-selected");
-  //     tab.classList.toggle("tab-selected");
-  //     return;
-  //   }
-  // });
 }
 
 function createNav() {
@@ -92,23 +69,20 @@ function createNav() {
   contact.textContent = "Contact";
 
   home.addEventListener("click", (ev) => {
-    //clearContent();
     contentSetup();
     loadHome();
     select(home);
   });
 
   menu.addEventListener("click", (ev) => {
-    //clearContent();
     contentSetup();
     loadMenu();
     select(menu);
   });
 
   contact.addEventListener("click", (ev) => {
-    //clearContent();
     contentSetup();
-    //loadContact();
+    loadContact();
     select(contact);
   });
 
@@ -117,11 +91,6 @@ function createNav() {
   nav.appendChild(contact);
 
   navContainer.appendChild(nav);
-  // if (callReason === "init") {
-  //   contentSetup();
-  //   loadHome();
-  //   home.classList.add("tab-selected");
-  // }
   const contentContainer = document.createElement("div");
   contentContainer.classList.add("content-container");
   contentContainer.insertBefore(navContainer, contentContainer.firstChild);

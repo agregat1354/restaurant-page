@@ -1,5 +1,6 @@
 :root {
   box-sizing: border-box;
+  --description-text: white;
 }
 
 *,
@@ -16,25 +17,20 @@
   justify-content: center;
 }
 
-.menu-container {
+.wrapper {
   width: max-content;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.menu-entry {
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border: 3px solid white;
-  background-color: bisque;
-  border-radius: 1rem;
+.description {
+  color: var(--description-text);
 }
 
-.menu-img {
-  width: 225px;
-  height: 225px;
+.profile-picture {
+  width: 500px;
+  height: 500px;
+  border: 10px solid yellowgreen;
+  border-radius: 2rem;
 }

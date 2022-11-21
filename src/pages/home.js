@@ -11,15 +11,14 @@ function load() {
   restaurantImage.classList.add("home-img");
 
   const paragraph = document.createElement("p");
-  paragraph.textContent =
-    " We are the best restaurant you'll ever find. Our food is always fresh, delicious and reasonably priced.";
+  // paragraph.textContent =
+  //   " We are the best restaurant you'll ever find. Our food is always fresh, delicious and reasonably priced.";
+  paragraph.innerHTML +=
+    "W całym Khorinis<br>Moja kuchnia jest najlepsza<br>Jeśli spróbujesz czegoś<br>Nie dasz rady przestać.";
   paragraph.classList.add("restaurant-description");
-
-  // const contentContainer = document.querySelector(".content-container");
-  // contentContainer.innerHTML = "";
-  // contentContainer.appendChild(header);
-  // contentContainer.appendChild(restaurantImage);
-  // contentContainer.appendChild(paragraph);
+  const descriptionWrapper = document.createElement("div");
+  descriptionWrapper.classList.add("description-wrapper");
+  descriptionWrapper.appendChild(paragraph);
   const pageContent = document.querySelector(".page-content");
   pageContent.innerHTML = "";
   const main = document.createElement("div");
@@ -28,7 +27,7 @@ function load() {
   wrapper.classList.add("wrapper");
   wrapper.appendChild(header);
   wrapper.appendChild(restaurantImage);
-  wrapper.appendChild(paragraph);
+  wrapper.appendChild(descriptionWrapper);
   main.appendChild(wrapper);
   pageContent.appendChild(main);
 }

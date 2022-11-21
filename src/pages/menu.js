@@ -5,7 +5,7 @@ import minersmeat from "../assets/images/minersmeat.webp";
 import "../css/menu.css";
 // import { ContextReplacementPlugin } from "webpack";
 const content = document.querySelector("#content");
-function loadMenu() {
+function load() {
   const heading = document.createElement("h1");
   heading.textContent = "Menu";
   const riceImg = new Image();
@@ -60,4 +60,4 @@ function loadMenu() {
   pageContent.appendChild(main);
 }
 
-export default loadMenu;
+export default load;
