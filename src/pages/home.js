@@ -1,4 +1,4 @@
-import image from "../assets/images/restaurant.jpg";
+import image from "../assets/images/snaf.webp";
 import "../css/style.css";
 const content = document.querySelector("#content");
 const homeButton = document.querySelector("home-tab");
