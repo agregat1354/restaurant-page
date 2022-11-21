@@ -15,14 +15,22 @@ function load() {
     " We are the best restaurant you'll ever find. Our food is always fresh, delicious and reasonably priced.";
   paragraph.classList.add("restaurant-description");
 
-  const contentContainer = document.createElement("div");
-  contentContainer.classList.add("content-container");
-
-  contentContainer.appendChild(header);
-  contentContainer.appendChild(restaurantImage);
-  contentContainer.appendChild(paragraph);
-
-  content.appendChild(contentContainer);
+  // const contentContainer = document.querySelector(".content-container");
+  // contentContainer.innerHTML = "";
+  // contentContainer.appendChild(header);
+  // contentContainer.appendChild(restaurantImage);
+  // contentContainer.appendChild(paragraph);
+  const pageContent = document.querySelector(".page-content");
+  pageContent.innerHTML = "";
+  const main = document.createElement("div");
+  main.classList.add("main");
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("wrapper");
+  wrapper.appendChild(header);
+  wrapper.appendChild(restaurantImage);
+  wrapper.appendChild(paragraph);
+  main.appendChild(wrapper);
+  pageContent.appendChild(main);
 }
 
 export default load;

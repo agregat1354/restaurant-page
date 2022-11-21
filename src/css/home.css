@@ -15,6 +15,7 @@
 .main-title {
   font-size: 3rem;
   color: var(--title-head-text);
+  text-align: center;
 }
 
 .home-img {
@@ -24,4 +25,11 @@
 
 .restaurant-description {
   color: var(--restaurant-description-text);
+}
+
+.wrapper {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }

@@ -5,7 +5,6 @@ import minersmeat from "../assets/images/minersmeat.webp";
 import "../css/menu.css";
 // import { ContextReplacementPlugin } from "webpack";
 const content = document.querySelector("#content");
-
 function loadMenu() {
   const heading = document.createElement("h1");
   heading.textContent = "Menu";
@@ -55,7 +54,10 @@ function loadMenu() {
   menuContainer.appendChild(minersMeatWrapper);
 
   main.appendChild(menuContainer);
-  content.appendChild(main);
+  const pageContent = document.querySelector(".page-content");
+  pageContent.innerHTML = "";
+
+  pageContent.appendChild(main);
 }
 
 export default loadMenu;
