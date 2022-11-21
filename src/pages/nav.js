@@ -1,10 +1,16 @@
 import "../css/nav.css";
+import "../css/main.css";
+import "../assets/images/oldcamp.webp";
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
 
 const content = document.querySelector("#content");
 function clearContent() {
   content.innerHTML = "";
+}
+
+function contentSetup() {
+  content.classList.add("main-container");
 }
 
 function createNav() {
@@ -53,18 +59,21 @@ function createNav() {
 
   home.addEventListener("click", (ev) => {
     clearContent();
+    contentSetup();
     loadHome();
     select(home);
   });
 
   menu.addEventListener("click", (ev) => {
     clearContent();
+    contentSetup();
     loadMenu();
     select(menu);
   });
 
   contact.addEventListener("click", (ev) => {
     clearContent();
+    contentSetup();
     //loadContact();
     select(contact);
   });
@@ -76,6 +85,7 @@ function createNav() {
   navContainer.appendChild(nav);
   document.body.insertBefore(navContainer, document.body.firstChild);
   loadHome();
+  contentSetup();
   home.classList.add("tab-selected");
 }
 
